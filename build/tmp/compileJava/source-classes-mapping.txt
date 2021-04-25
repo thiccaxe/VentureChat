@@ -1,0 +1,152 @@
+mineverse/Aust1n46/chat/channel/ChatChannel.java
+ mineverse.Aust1n46.chat.channel.ChatChannel
+mineverse/Aust1n46/chat/command/VentureCommandExecutor.java
+ mineverse.Aust1n46.chat.command.VentureCommandExecutor
+mineverse/Aust1n46/chat/command/chat/Chwho.java
+ mineverse.Aust1n46.chat.command.chat.Chwho
+mineverse/Aust1n46/chat/database/PlayerData.java
+ mineverse.Aust1n46.chat.database.PlayerData
+mineverse/Aust1n46/chat/localization/LocalizedMessage.java
+ mineverse.Aust1n46.chat.localization.LocalizedMessage
+mineverse/Aust1n46/chat/gui/GuiSlot.java
+ mineverse.Aust1n46.chat.gui.GuiSlot
+mineverse/Aust1n46/chat/command/chat/Kickchannel.java
+ mineverse.Aust1n46.chat.command.chat.Kickchannel
+mineverse/Aust1n46/chat/VentureChatPlaceholders.java
+ mineverse.Aust1n46.chat.VentureChatPlaceholders
+mineverse/Aust1n46/chat/api/events/MutePlayerEvent.java
+ mineverse.Aust1n46.chat.api.events.MutePlayerEvent
+mineverse/Aust1n46/chat/command/chat/Filter.java
+ mineverse.Aust1n46.chat.command.chat.Filter
+mineverse/Aust1n46/chat/command/message/Spy.java
+ mineverse.Aust1n46.chat.command.message.Spy
+mineverse/Aust1n46/chat/command/message/MessageToggle.java
+ mineverse.Aust1n46.chat.command.message.MessageToggle
+mineverse/Aust1n46/chat/command/chat/Me.java
+ mineverse.Aust1n46.chat.command.chat.Me
+mineverse/Aust1n46/chat/command/chat/Chatinfo.java
+ mineverse.Aust1n46.chat.command.chat.Chatinfo
+mineverse/Aust1n46/chat/command/chat/Chlist.java
+ mineverse.Aust1n46.chat.command.chat.Chlist
+mineverse/Aust1n46/chat/command/chat/Commandblock.java
+ mineverse.Aust1n46.chat.command.chat.Commandblock
+mineverse/Aust1n46/chat/alias/Alias.java
+ mineverse.Aust1n46.chat.alias.Alias
+mineverse/Aust1n46/chat/command/chat/Edit.java
+ mineverse.Aust1n46.chat.command.chat.Edit
+ mineverse.Aust1n46.chat.command.chat.Edit$1
+ mineverse.Aust1n46.chat.command.chat.Edit$1$1
+mineverse/Aust1n46/chat/command/chat/Listen.java
+ mineverse.Aust1n46.chat.command.chat.Listen
+mineverse/Aust1n46/chat/command/chat/Venturechat.java
+ mineverse.Aust1n46.chat.command.chat.Venturechat
+mineverse/Aust1n46/chat/listeners/CommandListener.java
+ mineverse.Aust1n46.chat.listeners.CommandListener
+mineverse/Aust1n46/chat/listeners/PacketListener.java
+ mineverse.Aust1n46.chat.listeners.PacketListener
+mineverse/Aust1n46/chat/command/message/MessageCommandExecutor.java
+ mineverse.Aust1n46.chat.command.message.MessageCommandExecutor
+mineverse/Aust1n46/chat/command/chat/Forceall.java
+ mineverse.Aust1n46.chat.command.chat.Forceall
+mineverse/Aust1n46/chat/command/message/Notifications.java
+ mineverse.Aust1n46.chat.command.message.Notifications
+mineverse/Aust1n46/chat/command/chat/Channel.java
+ mineverse.Aust1n46.chat.command.chat.Channel
+mineverse/Aust1n46/chat/command/mute/Unmuteall.java
+ mineverse.Aust1n46.chat.command.mute.Unmuteall
+mineverse/Aust1n46/chat/command/CCommand.java
+ mineverse.Aust1n46.chat.command.CCommand
+mineverse/Aust1n46/chat/command/chat/Party.java
+ mineverse.Aust1n46.chat.command.chat.Party
+mineverse/Aust1n46/chat/command/chat/VentureChatGui.java
+ mineverse.Aust1n46.chat.command.chat.VentureChatGui
+mineverse/Aust1n46/chat/command/mute/Mute.java
+ mineverse.Aust1n46.chat.command.mute.Mute
+mineverse/Aust1n46/chat/json/JsonFormat.java
+ mineverse.Aust1n46.chat.json.JsonFormat
+mineverse/Aust1n46/chat/command/chat/Commandspy.java
+ mineverse.Aust1n46.chat.command.chat.Commandspy
+mineverse/Aust1n46/chat/command/chat/Config.java
+ mineverse.Aust1n46.chat.command.chat.Config
+mineverse/Aust1n46/chat/command/chat/Nick.java
+ mineverse.Aust1n46.chat.command.chat.Nick
+mineverse/Aust1n46/chat/command/chat/RangedSpy.java
+ mineverse.Aust1n46.chat.command.chat.RangedSpy
+mineverse/Aust1n46/chat/api/events/ChannelJoinEvent.java
+ mineverse.Aust1n46.chat.api.events.ChannelJoinEvent
+mineverse/Aust1n46/chat/api/events/VentureChatEvent.java
+ mineverse.Aust1n46.chat.api.events.VentureChatEvent
+mineverse/Aust1n46/chat/listeners/LoginListener.java
+ mineverse.Aust1n46.chat.listeners.LoginListener
+mineverse/Aust1n46/chat/command/mute/MuteContainer.java
+ mineverse.Aust1n46.chat.command.mute.MuteContainer
+mineverse/Aust1n46/chat/command/mute/Muteall.java
+ mineverse.Aust1n46.chat.command.mute.Muteall
+mineverse/Aust1n46/chat/localization/InternalMessage.java
+ mineverse.Aust1n46.chat.localization.InternalMessage
+mineverse/Aust1n46/chat/command/VentureCommand.java
+ mineverse.Aust1n46.chat.command.VentureCommand
+mineverse/Aust1n46/chat/utilities/Format.java
+ mineverse.Aust1n46.chat.utilities.Format
+mineverse/Aust1n46/chat/versions/VersionHandler.java
+ mineverse.Aust1n46.chat.versions.VersionHandler
+mineverse/Aust1n46/chat/api/MineverseChatPlayer.java
+ mineverse.Aust1n46.chat.api.MineverseChatPlayer
+mineverse/Aust1n46/chat/command/chat/Leave.java
+ mineverse.Aust1n46.chat.command.chat.Leave
+mineverse/Aust1n46/chat/listeners/SignListener.java
+ mineverse.Aust1n46.chat.listeners.SignListener
+mineverse/Aust1n46/chat/command/chat/Force.java
+ mineverse.Aust1n46.chat.command.chat.Force
+mineverse/Aust1n46/chat/channel/ChatChannelInfo.java
+ mineverse.Aust1n46.chat.channel.ChatChannelInfo
+mineverse/Aust1n46/chat/command/message/Reply.java
+ mineverse.Aust1n46.chat.command.message.Reply
+mineverse/Aust1n46/chat/command/mute/Unmute.java
+ mineverse.Aust1n46.chat.command.mute.Unmute
+mineverse/Aust1n46/chat/command/chat/Clearchat.java
+ mineverse.Aust1n46.chat.command.chat.Clearchat
+mineverse/Aust1n46/chat/utilities/NameFetcher.java
+ mineverse.Aust1n46.chat.utilities.NameFetcher
+mineverse/Aust1n46/chat/api/MineverseChatAPI.java
+ mineverse.Aust1n46.chat.api.MineverseChatAPI
+mineverse/Aust1n46/chat/command/chat/Setchannel.java
+ mineverse.Aust1n46.chat.command.chat.Setchannel
+mineverse/Aust1n46/chat/api/SynchronizedMineverseChatPlayer.java
+ mineverse.Aust1n46.chat.api.SynchronizedMineverseChatPlayer
+mineverse/Aust1n46/chat/utilities/UUIDFetcher.java
+ mineverse.Aust1n46.chat.utilities.UUIDFetcher
+mineverse/Aust1n46/chat/command/chat/Channelinfo.java
+ mineverse.Aust1n46.chat.command.chat.Channelinfo
+mineverse/Aust1n46/chat/command/chat/Broadcast.java
+ mineverse.Aust1n46.chat.command.chat.Broadcast
+mineverse/Aust1n46/chat/command/chat/Removemessage.java
+ mineverse.Aust1n46.chat.command.chat.Removemessage
+ mineverse.Aust1n46.chat.command.chat.Removemessage$1
+ mineverse.Aust1n46.chat.command.chat.Removemessage$1$1
+mineverse/Aust1n46/chat/ChatMessage.java
+ mineverse.Aust1n46.chat.ChatMessage
+mineverse/Aust1n46/chat/database/TemporaryDataInstance.java
+ mineverse.Aust1n46.chat.database.TemporaryDataInstance
+mineverse/Aust1n46/chat/database/Database.java
+ mineverse.Aust1n46.chat.database.Database
+mineverse/Aust1n46/chat/command/chat/Chatreload.java
+ mineverse.Aust1n46.chat.command.chat.Chatreload
+mineverse/Aust1n46/chat/command/message/IgnoreCommandExecutor.java
+ mineverse.Aust1n46.chat.command.message.IgnoreCommandExecutor
+mineverse/Aust1n46/chat/command/chat/Kickchannelall.java
+ mineverse.Aust1n46.chat.command.chat.Kickchannelall
+mineverse/Aust1n46/chat/command/chat/BungeeToggle.java
+ mineverse.Aust1n46.chat.command.chat.BungeeToggle
+mineverse/Aust1n46/chat/localization/Localization.java
+ mineverse.Aust1n46.chat.localization.Localization
+mineverse/Aust1n46/chat/command/chat/Setchannelall.java
+ mineverse.Aust1n46.chat.command.chat.Setchannelall
+mineverse/Aust1n46/chat/listeners/ChatListener.java
+ mineverse.Aust1n46.chat.listeners.ChatListener
+mineverse/Aust1n46/chat/MineverseChat.java
+ mineverse.Aust1n46.chat.MineverseChat
+ mineverse.Aust1n46.chat.MineverseChat$1
+ mineverse.Aust1n46.chat.MineverseChat$2
+ mineverse.Aust1n46.chat.MineverseChat$3
+ mineverse.Aust1n46.chat.MineverseChat$4
