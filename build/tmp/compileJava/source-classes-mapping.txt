@@ -64,6 +64,8 @@ mineverse/Aust1n46/chat/command/mute/Mute.java
  mineverse.Aust1n46.chat.command.mute.Mute
 mineverse/Aust1n46/chat/json/JsonFormat.java
  mineverse.Aust1n46.chat.json.JsonFormat
+mineverse/Aust1n46/chat/utilities/Format.java
+ mineverse.Aust1n46.chat.utilities.Format
 mineverse/Aust1n46/chat/command/chat/Commandspy.java
  mineverse.Aust1n46.chat.command.chat.Commandspy
 mineverse/Aust1n46/chat/command/chat/Config.java
@@ -86,8 +88,8 @@ mineverse/Aust1n46/chat/localization/InternalMessage.java
  mineverse.Aust1n46.chat.localization.InternalMessage
 mineverse/Aust1n46/chat/command/VentureCommand.java
  mineverse.Aust1n46.chat.command.VentureCommand
-mineverse/Aust1n46/chat/utilities/Format.java
- mineverse.Aust1n46.chat.utilities.Format
+mineverse/Aust1n46/chat/command/chat/Clearchat.java
+ mineverse.Aust1n46.chat.command.chat.Clearchat
 mineverse/Aust1n46/chat/versions/VersionHandler.java
  mineverse.Aust1n46.chat.versions.VersionHandler
 mineverse/Aust1n46/chat/api/MineverseChatPlayer.java
@@ -104,8 +106,9 @@ mineverse/Aust1n46/chat/command/message/Reply.java
  mineverse.Aust1n46.chat.command.message.Reply
 mineverse/Aust1n46/chat/command/mute/Unmute.java
  mineverse.Aust1n46.chat.command.mute.Unmute
-mineverse/Aust1n46/chat/command/chat/Clearchat.java
- mineverse.Aust1n46.chat.command.chat.Clearchat
+mineverse/Aust1n46/chat/listeners/ChatListener.java
+ mineverse.Aust1n46.chat.listeners.ChatListener
+ mineverse.Aust1n46.chat.listeners.ChatListener$1
 mineverse/Aust1n46/chat/utilities/NameFetcher.java
  mineverse.Aust1n46.chat.utilities.NameFetcher
 mineverse/Aust1n46/chat/api/MineverseChatAPI.java
@@ -142,11 +145,11 @@ mineverse/Aust1n46/chat/localization/Localization.java
  mineverse.Aust1n46.chat.localization.Localization
 mineverse/Aust1n46/chat/command/chat/Setchannelall.java
  mineverse.Aust1n46.chat.command.chat.Setchannelall
-mineverse/Aust1n46/chat/listeners/ChatListener.java
- mineverse.Aust1n46.chat.listeners.ChatListener
 mineverse/Aust1n46/chat/MineverseChat.java
  mineverse.Aust1n46.chat.MineverseChat
  mineverse.Aust1n46.chat.MineverseChat$1
  mineverse.Aust1n46.chat.MineverseChat$2
  mineverse.Aust1n46.chat.MineverseChat$3
  mineverse.Aust1n46.chat.MineverseChat$4
+mineverse/Aust1n46/chat/mention/MentionListener.java
+ mineverse.Aust1n46.chat.mention.MentionListener

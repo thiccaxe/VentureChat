@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import mineverse.Aust1n46.chat.api.MineverseChatAPI;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
@@ -25,24 +26,21 @@ public class VentureChatEvent extends Event {
 	private final String playerPrimaryGroup;
 	private final ChatChannel channel;
 	private final Set<Player> recipients;
-	private final Set<MineverseChatPlayer> mcplayers;
 	private final int recipientCount; //For not counting vanished players
 	private final String format;
 	private final String chat;
 	private final String globalJSON;
 	private final int hash;
 	private final boolean bungee;
-	
-	public VentureChatEvent(MineverseChatPlayer mcp, String username, String nickname, String playerPrimaryGroup, ChatChannel channel, Set<MineverseChatPlayer> recipients, int recipientCount, String format, String chat, String globalJSON, int hash, boolean bungee) {
+
+	public VentureChatEvent(MineverseChatPlayer mcp, String username, String nickname, String playerPrimaryGroup, ChatChannel channel, Set<Player> recipients, int recipientCount, String format, String chat, String globalJSON, int hash, boolean bungee) {
 		super(MineverseChat.ASYNC);
 		this.mcp = mcp;
 		this.username = username;
 		this.nickname = nickname;
 		this.playerPrimaryGroup = playerPrimaryGroup;
 		this.channel = channel;
-		this.mcplayers = recipients;
-		this.recipients = new HashSet<>();
-		recipients.forEach(mineverseChatPlayer -> this.recipients.add(mineverseChatPlayer.getPlayer()));
+		this.recipients = recipients;
 		this.recipientCount = recipientCount;
 		this.format = format;
 		this.chat = chat;
@@ -75,10 +73,6 @@ public class VentureChatEvent extends Event {
 		return this.recipients;
 	}
 
-	public Set<MineverseChatPlayer> getMCRecipients() {
-		return this.mcplayers;
-	}
-
 	//Could be lower than the total number of recipients because vanished players are not counted
 	public int getRecipientCount() {
 		return this.recipientCount;
@@ -91,28 +85,28 @@ public class VentureChatEvent extends Event {
 	public String getChat() {
 		return this.chat;
 	}
-	
+
 	public String getConsoleChat() {
 		return this.format + this.chat;
 	}
-	
+
 	public String getGlobalJSON() {
 		return this.globalJSON;
 	}
-	
+
 	public int getHash() {
 		return this.hash;
 	}
-	
+
 	public boolean isBungee() {
 		return this.bungee;
 	}
-	
+
 	@Override
 	public HandlerList getHandlers() {
 	    return handlers;
 	}
-	 
+
 	public static HandlerList getHandlerList() {
 	    return handlers;
 	}

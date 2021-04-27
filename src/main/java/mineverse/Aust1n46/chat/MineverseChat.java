@@ -121,7 +121,6 @@ public class MineverseChat extends JavaPlugin implements PluginMessageListener {
 			Bukkit.getPluginManager().disablePlugin(this);
 			return;
 		}
-		setupMentions();
 
 		Localization.initialize();
 		Alias.initialize();
@@ -177,6 +176,11 @@ public class MineverseChat extends JavaPlugin implements PluginMessageListener {
 		if(pluginManager.isPluginEnabled("PlaceholderAPI")) {
 			Bukkit.getConsoleSender().sendMessage(Format.FormatStringAll("&8[&eVentureChat&8]&e - Enabling PlaceholderAPI Hook"));
 		}
+		if (Bukkit.getPluginManager().isPluginEnabled("InteractiveChat")) {
+			Bukkit.getConsoleSender().sendMessage(Format.FormatStringAll("&8[&eVentureChat&8]&e - Enabling InteractiveChat Hook"));
+			Bukkit.getPluginManager().registerEvents(new MentionListener(), this);
+		}
+
 		
 		new VentureChatPlaceholders().register();
 		
@@ -320,12 +324,6 @@ public class MineverseChat extends JavaPlugin implements PluginMessageListener {
 		}
 		return(chat != null);
 	}
-	private void setupMentions() {
-		if (Bukkit.getPluginManager().isPluginEnabled("DeluxeMentions")) {
-			Bukkit.getPluginManager().registerEvents(new MentionListener(), this);
-		}
-	}
-
 	
 	public static MineverseChat getInstance() {
 		return getPlugin(MineverseChat.class);	
@@ -493,10 +491,10 @@ public class MineverseChat extends JavaPlugin implements PluginMessageListener {
 					return;
 				}
 				
-				Set<MineverseChatPlayer> recipients = new HashSet<>();
+				Set<Player> recipients = new HashSet<>();
 				for(MineverseChatPlayer p : MineverseChatAPI.getOnlineMineverseChatPlayers()) {
 					if(p.isListening(chatChannelObject.getName())) {
-						recipients.add(p);
+						recipients.add(p.getPlayer());
 					}
 				}
 				

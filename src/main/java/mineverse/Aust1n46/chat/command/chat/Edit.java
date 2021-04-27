@@ -62,7 +62,7 @@ public class Edit implements VentureCommand {
 							continue;
 						}
 						if(message.getMessage().contains(Format.FormatStringAll(plugin.getConfig().getString("messageremovericon")))) {
-							String submessage = message.getMessage().substring(0, message.getMessage().length() - plugin.getConfig().getString("messageremovericon").length() - 1).replaceAll("(ง([a-z0-9]))", "");
+							String submessage = message.getMessage().substring(0, message.getMessage().length() - plugin.getConfig().getString("messageremovericon").length() - 1).replaceAll("(ยง([a-z0-9]))", "");
 							if(submessage.hashCode() == hash) {
 								WrappedChatComponent removedComponent = p.getPlayer().hasPermission("venturechat.message.bypass") ? Edit.this.getMessageDeletedChatComponentAdmin(message) : Edit.this.getMessageDeletedChatComponentPlayer();
 								message.setComponent(removedComponent);

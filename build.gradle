@@ -25,17 +25,28 @@ repositories {
     maven {
         url "https://repo.dmulloy2.net/repository/public/"
     }
-    flatDir {
-        dirs 'lib'
+    maven {
+        url "https://repo.loohpjames.com/repository"
     }
+
 }
 
 dependencies {
     compileOnly "org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT"
-    implementation "com.zaxxer:HikariCP:4.0.3"
     compileOnly 'me.clip:placeholderapi:2.10.9'
     compileOnly "com.github.MilkBowl:VaultAPI:1.7"
     compileOnly group: "com.comphenix.protocol", name: "ProtocolLib", version: "4.6.0";
+    compileOnly "com.loohp:InteractiveChat:3.3.0.11"
+    implementation "com.zaxxer:HikariCP:4.0.3"
     implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
-    implementation files('lib/Deluxe Mentions.jar')
+}
+
+shadowJar {
+    relocate 'org.json.simple', 'mineverse.Aust1n46.chat.libs.org.json.simple'
+    relocate 'com.zaxxer.hikari', 'mineverse.Aust1n46.chat.libs.com.zaxxer.hikari'
+}
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }

@@ -3,6 +3,7 @@ version: 2.22.7
 api-version: 1.16
 main: mineverse.Aust1n46.chat.MineverseChat
 depend: [Vault, ProtocolLib, PlaceholderAPI]
+softdepend: [InteractiveChat]
 author: Aust1n46
 website: https://bitbucket.org/Aust1n46/venturechat/
 description: #1 Channels Chat plugin! Spigot + Bungee. Supports PlaceholderAPI + JSON formatting. Moderation GUI!

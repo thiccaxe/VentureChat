@@ -91,15 +91,15 @@ public class VentureChatGui implements VentureCommand {
 		}
 		
 		ItemMeta closeMeta = close.getItemMeta();
-		closeMeta.setDisplayName("§oClose GUI");
+		closeMeta.setDisplayName("Â§oClose GUI");
 		close.setItemMeta(closeMeta);
 		
 		SkullMeta skullMeta = (SkullMeta) skull.getItemMeta(); 
 		skullMeta.setOwner(target.getName()); 
-		skullMeta.setDisplayName("§b" + target.getName());
+		skullMeta.setDisplayName("Â§b" + target.getName());
 		List<String> skullLore = new ArrayList<String>();
-		skullLore.add("§7Channel: " + channel.getColor() + channel.getName());
-		skullLore.add("§7Hash: " + channel.getColor() + hash);
+		skullLore.add("Â§7Channel: " + channel.getColor() + channel.getName());
+		skullLore.add("Â§7Hash: " + channel.getColor() + hash);
 		skullMeta.setLore(skullLore);
 		skull.setItemMeta(skullMeta); 
 		skull.setDurability((short) 3);
@@ -150,15 +150,15 @@ public class VentureChatGui implements VentureCommand {
 		}
 		
 		ItemMeta closeMeta = close.getItemMeta();
-		closeMeta.setDisplayName("§oClose GUI");
+		closeMeta.setDisplayName("Â§oClose GUI");
 		close.setItemMeta(closeMeta);
 		
 		SkullMeta skullMeta = (SkullMeta) skull.getItemMeta(); 
 		skullMeta.setOwner("Scarsz");
-		skullMeta.setDisplayName("§bDiscord_Message");
+		skullMeta.setDisplayName("Â§bDiscord_Message");
 		List<String> skullLore = new ArrayList<String>();
-		skullLore.add("§7Channel: " + channel.getColor() + channel.getName());
-		skullLore.add("§7Hash: " + channel.getColor() + hash);
+		skullLore.add("Â§7Channel: " + channel.getColor() + channel.getName());
+		skullLore.add("Â§7Hash: " + channel.getColor() + hash);
 		skullMeta.setLore(skullLore);
 		skull.setItemMeta(skullMeta); 
 		skull.setDurability((short) 3);
