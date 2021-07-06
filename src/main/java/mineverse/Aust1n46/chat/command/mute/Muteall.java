@@ -1,5 +1,6 @@
 package mineverse.Aust1n46.chat.command.mute;
 
+import mineverse.Aust1n46.chat.utilities.Format;
 import org.bukkit.command.CommandSender;
 
 import mineverse.Aust1n46.chat.MineverseChat;
@@ -30,9 +31,9 @@ public class Muteall implements VentureCommand {
 			if(args.length > 1) {
 				StringBuilder reasonBuilder = new StringBuilder();
 				for(int a = 1; a < args.length; a ++) {
-					reasonBuilder.append(args[a]);
+					reasonBuilder.append(args[a]).append(" ");
 				}
-				reason = reasonBuilder.toString();
+				reason = Format.FormatStringAll(reasonBuilder.toString().trim());
 			}
 			if(reason.isEmpty()) {
 				boolean bungee = false;
