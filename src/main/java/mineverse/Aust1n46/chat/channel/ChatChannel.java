@@ -15,22 +15,22 @@ import mineverse.Aust1n46.chat.utilities.Format;
 /**
  * Chat channel object pojo. Class also contains static initialization methods
  * for reading chat channels from the config file.
- * 
+ *
  * @author Aust1n46
  */
 public class ChatChannel {
 	private static final String PERMISSION_PREFIX = "venturechat.";
 	private static final String NO_PERMISSIONS = "venturechat.none";
 
+	private static boolean aliasesRegisteredAsCommands;
+
 	private static MineverseChat plugin = MineverseChat.getInstance();
 	private static ChatChannel defaultChatChannel;
-	private static boolean aliasesRegisteredAsCommands;
-	
-	@Deprecated
-	private static ChatChannel[] channels;
-	
 	private static String defaultColor;
 	private static HashMap<String, ChatChannel> chatChannels;
+
+	@Deprecated
+	private static ChatChannel[] channels;
 
 	private String name;
 	private String permission;
@@ -83,24 +83,24 @@ public class ChatChannel {
 			}
 		}
 	}
-	
+
 	public static boolean areAliasesRegisteredAsCommands() {
 		return aliasesRegisteredAsCommands;
 	}
 
 	/**
 	 * Get array of chat channels.
-	 * 
+	 *
 	 * @return {@link ChatChannel}[]
 	 */
 	@Deprecated
 	public static ChatChannel[] getChannels() {
 		return channels;
 	}
-	
+
 	/**
 	 * Get list of chat channels.
-	 * 
+	 *
 	 * @return {@link Collection}&lt{@link ChatChannel}&gt
 	 */
 	public static Collection<ChatChannel> getChatChannels() {
@@ -109,7 +109,7 @@ public class ChatChannel {
 
 	/**
 	 * Get a chat channel by name.
-	 * 
+	 *
 	 * @param channelName
 	 *            name of channel to get.
 	 * @return {@link ChatChannel}
@@ -120,7 +120,7 @@ public class ChatChannel {
 
 	/**
 	 * Checks if the chat channel exists.
-	 * 
+	 *
 	 * @param channelName
 	 *            name of channel to check.
 	 * @return true if channel exists, false otherwise.
@@ -131,7 +131,7 @@ public class ChatChannel {
 
 	/**
 	 * Get default chat channel color.
-	 * 
+	 *
 	 * @return {@link String}
 	 */
 	public static String getDefaultColor() {
@@ -140,7 +140,7 @@ public class ChatChannel {
 
 	/**
 	 * Get default chat channel.
-	 * 
+	 *
 	 * @return {@link ChatChannel}
 	 */
 	public static ChatChannel getDefaultChannel() {
@@ -149,7 +149,7 @@ public class ChatChannel {
 
 	/**
 	 * Get list of chat channels with autojoin set to true.
-	 * 
+	 *
 	 * @return {@link List}&lt{@link ChatChannel}&gt
 	 */
 	public static List<ChatChannel> getAutojoinList() {
@@ -164,7 +164,7 @@ public class ChatChannel {
 
 	/**
 	 * Parameterized constructor a {@link ChatChannel}.
-	 * 
+	 *
 	 * @param name
 	 * @param color
 	 * @param chatColor
@@ -181,8 +181,8 @@ public class ChatChannel {
 	 * @param format
 	 */
 	public ChatChannel(String name, String color, String chatColor, String permission, String speakPermission,
-			boolean mutable, boolean filter, boolean defaultChannel, String alias, double distance, boolean autojoin,
-			boolean bungee, int cooldown, String format) {
+					   boolean mutable, boolean filter, boolean defaultChannel, String alias, double distance, boolean autojoin,
+					   boolean bungee, int cooldown, String format) {
 		this.name = name;
 		this.color = color;
 		this.chatColor = chatColor;
@@ -201,7 +201,7 @@ public class ChatChannel {
 
 	/**
 	 * Deprecated parameterized constructor a {@link ChatChannel}.
-	 * 
+	 *
 	 * @param name
 	 * @param color
 	 * @param chatColor
@@ -219,8 +219,8 @@ public class ChatChannel {
 	 */
 	@Deprecated
 	public ChatChannel(String name, String color, String chatColor, String permission, String speakPermission,
-			Boolean mutable, Boolean filter, Boolean defaultChannel, String alias, Double distance, Boolean autojoin,
-			Boolean bungee, int cooldown, String format) {
+					   Boolean mutable, Boolean filter, Boolean defaultChannel, String alias, Double distance, Boolean autojoin,
+					   Boolean bungee, int cooldown, String format) {
 		this.name = name;
 		this.color = color;
 		this.chatColor = chatColor;
@@ -239,7 +239,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the name of the chat channel.
-	 * 
+	 *
 	 * @return {@link String}
 	 */
 	public String getName() {
@@ -248,7 +248,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the format of the chat channel.
-	 * 
+	 *
 	 * @return {@link String}
 	 */
 	public String getFormat() {
@@ -257,7 +257,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the cooldown of the chat channel in seconds.
-	 * 
+	 *
 	 * @return int
 	 */
 	public int getCooldown() {
@@ -266,7 +266,7 @@ public class ChatChannel {
 
 	/**
 	 * Check if the chat channel is BungeeCord enabled.
-	 * 
+	 *
 	 * @return {@link Boolean#TRUE} if the chat channel is BungeeCord enabled,
 	 *         {@link Boolean#FALSE} otherwise.
 	 */
@@ -276,7 +276,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the permissions node for the chat channel.
-	 * 
+	 *
 	 * @return {@link String}
 	 */
 	public String getPermission() {
@@ -285,7 +285,7 @@ public class ChatChannel {
 
 	/**
 	 * Check if autojoin is enabled for the chat channel.
-	 * 
+	 *
 	 * @return {@link Boolean#TRUE} if autojoin is enabled, {@link Boolean#FALSE}
 	 *         otherwise.
 	 */
@@ -295,7 +295,7 @@ public class ChatChannel {
 
 	/**
 	 * Check if the chat channel allows muting.
-	 * 
+	 *
 	 * @return {@link Boolean#TRUE} if muting is allowed, {@link Boolean#FALSE}
 	 *         otherwise.
 	 */
@@ -305,7 +305,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the formatted color of the chat channel.
-	 * 
+	 *
 	 * @return {@link String}. Returns {@link Format#DEFAULT_COLOR_CODE} if the
 	 *         color is invalid.
 	 */
@@ -321,7 +321,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the raw color value of the chat channel.
-	 * 
+	 *
 	 * @return {@link String}
 	 */
 	public String getColorRaw() {
@@ -330,7 +330,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the formatted chat color of the chat channel.
-	 * 
+	 *
 	 * @return {@link String}. Returns {@link Format#DEFAULT_COLOR_CODE} if the chat
 	 *         color is invalid.
 	 */
@@ -349,7 +349,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the raw chat color value of the chat channel.
-	 * 
+	 *
 	 * @return {@link String}
 	 */
 	public String getChatColorRaw() {
@@ -358,7 +358,7 @@ public class ChatChannel {
 
 	/**
 	 * Check if the chat channel is the default chat channel.
-	 * 
+	 *
 	 * @return {@link Boolean#TRUE} if the chat channel is the default chat channel,
 	 *         {@link Boolean#FALSE} otherwise.
 	 */
@@ -368,7 +368,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the alias of the chat channel.
-	 * 
+	 *
 	 * @return {@link String}
 	 */
 	public String getAlias() {
@@ -377,7 +377,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the distance of the chat channel in blocks.
-	 * 
+	 *
 	 * @return {@link Double}
 	 */
 	public Double getDistance() {
@@ -386,7 +386,7 @@ public class ChatChannel {
 
 	/**
 	 * Checks if the chat channel has a distance set.
-	 * 
+	 *
 	 * @return {@link Boolean#TRUE} if the distance is greater than zero,
 	 *         {@link Boolean#FALSE} otherwise.
 	 */
@@ -396,7 +396,7 @@ public class ChatChannel {
 
 	/**
 	 * Checks if the chat channel has a cooldown set.
-	 * 
+	 *
 	 * @return {@link Boolean#TRUE} if the cooldown is greater than zero,
 	 *         {@link Boolean#FALSE} otherwise.
 	 */
@@ -406,7 +406,7 @@ public class ChatChannel {
 
 	/**
 	 * Checks if the chat channel has a permission set.
-	 * 
+	 *
 	 * @return {@link Boolean#TRUE} if the permission does not equal
 	 *         {@link ChatChannel#NO_PERMISSIONS}, {@link Boolean#FALSE} otherwise.
 	 */
@@ -416,7 +416,7 @@ public class ChatChannel {
 
 	/**
 	 * Checks if the chat channel has a speak permission set.
-	 * 
+	 *
 	 * @return true if the speak permission does not equal
 	 *         {@link ChatChannel#NO_PERMISSIONS}, false otherwise.
 	 */
@@ -426,7 +426,7 @@ public class ChatChannel {
 
 	/**
 	 * Get the speak permissions node for the chat channel.
-	 * 
+	 *
 	 * @return {@link String}
 	 */
 	public String getSpeakPermission() {
@@ -435,7 +435,7 @@ public class ChatChannel {
 
 	/**
 	 * Checks if the chat channel has the filter enabled.
-	 * 
+	 *
 	 * @return {@link Boolean#TRUE} if the chat channel has the filter enabled,
 	 *         {@link Boolean#FALSE} otherwise.
 	 */
@@ -445,7 +445,7 @@ public class ChatChannel {
 
 	/**
 	 * Compares the chat channel by name to determine equality.
-	 * 
+	 *
 	 * @param channel
 	 *            Object to compare for equality.
 	 * @return true if the objects are equal, false otherwise.

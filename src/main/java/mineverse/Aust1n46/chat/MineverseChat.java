@@ -112,35 +112,16 @@ public class MineverseChat extends JavaPlugin implements PluginMessageListener {
 		Bukkit.getConsoleSender().sendMessage(Format.FormatStringAll("&8[&eVentureChat&8]&e - Checking for Vault..."));
 		
 		if(!setupPermissions() || !setupChat()) {
-			Bukkit.getConsoleSender().sendMessage(Format.FormatStringAll("&8[&eVentureChat&8]&e - &cCould not find Vault dependency, disabling."));
+			Bukkit.getConsoleSender().sendMessage(Format.FormatStringAll("&8[&eVentureChat&8]&e - &cCould not find Vault and/or a Vault compatible permissions plugin!"));
 			Bukkit.getPluginManager().disablePlugin(this);
 			return;
 		}
 
-		Localization.initialize();
-		Alias.initialize();
-		JsonFormat.initialize();
-		GuiSlot.initialize();
-		ChatChannel.initialize(false);
+		initializeConfigReaders();
 		
 		Bukkit.getConsoleSender().sendMessage(Format.FormatStringAll("&8[&eVentureChat&8]&e - Loading player data"));
 		PlayerData.loadLegacyPlayerData();
 		PlayerData.loadPlayerData();
-		for(Player p : getServer().getOnlinePlayers()) {
-			MineverseChatPlayer mcp = MineverseChatAPI.getMineverseChatPlayer(p);
-			if(mcp == null) {
-				Bukkit.getConsoleSender().sendMessage(Format.FormatStringAll("&8[&eVentureChat&8]&c - Could not find player data post reload for currently online player: " + p.getName()));
-				Bukkit.getConsoleSender().sendMessage(Format.FormatStringAll("&8[&eVentureChat&8]&c - There could be an issue with your player data saving."));
-				String name = p.getName();
-				UUID uuid = p.getUniqueId();
-				mcp = new MineverseChatPlayer(uuid, name);
-			}
-			mcp.setOnline(true);
-			mcp.setHasPlayed(false);
-			mcp.setJsonFormat();
-			MineverseChatAPI.addMineverseChatOnlinePlayerToMap(mcp);
-			MineverseChatAPI.addNameToMap(mcp);
-		}
 		
 		Bukkit.getScheduler().runTaskAsynchronously(this, () -> {
 			Database.initializeMySQL();
@@ -273,6 +254,14 @@ public class MineverseChat extends JavaPlugin implements PluginMessageListener {
 	public static MineverseChat getInstance() {
 		return getPlugin(MineverseChat.class);	
 	}
+
+	public static void initializeConfigReaders() {
+		Localization.initialize();
+		Alias.initialize();
+		JsonFormat.initialize();
+		GuiSlot.initialize();
+		ChatChannel.initialize(false);
+		}
 	
 	public static Chat getVaultChat() {
 		return chat;
