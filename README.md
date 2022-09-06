@@ -15,7 +15,7 @@ Copyright (C) {2020} {Austin Brolly}
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ```
-
+Update: I don't think that the following is actually allowed under the GPLv3 (or a later version) license, so if that is the case then the code is also under GPLv3. Otherwise:
 License for the changes by thiccaxe:
 
 Copyright 2022 thiccaxe
